@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+   int n=6;
+   int arr[6]={1,2,3,4,6};
+   int sum=0;
+   for(int i=0;i<n-1;i++){
+     sum+=arr[i];
+   }
+   int nSum=n*(n+1)/2;
+   int ans=nSum-sum;
+   cout << ans;
+    return 0;
+}
