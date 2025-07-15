@@ -10,6 +10,7 @@ int binarySearch(int n,int arr[],int key){
   mid=start + (end-start)/2; // use for integer overflow
    if(arr[mid]==key){
      return mid;
+     break;
    }
    else if(arr[mid]<key){
      start=mid+1;
