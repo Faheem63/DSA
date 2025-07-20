@@ -22,7 +22,7 @@ int main()
        
        //move left
      }else{
-       ans=mid;
+       ans=arr[mid];
        end=mid-1;
      }
    }
