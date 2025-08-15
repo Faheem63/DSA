@@ -1,0 +1,42 @@
+class Solution {
+  public:
+    int findPages(vector<int> &arr, int k) {
+       int n=arr.size();
+       // if no. student > no. of book then the partician wouldnt be successful!
+       if(k>n){
+           return -1;
+       }
+       
+       int start=0,end=0,mid;
+       int ans;
+       
+       for(int i=0;i<n;i++){
+           start=max(start,arr[i]);
+           end+=arr[i];
+       }
+       
+       while(start<=end){
+           mid=start+(end-start)/2;
+           int count=1,pages=0;
+           for(int i=0;i<n;i++){
+// storing pages to first student.
+               pages+=arr[i];
+// if page size increase then mid value then storing the rest pages to second student
+               if(pages>mid){
+                   count++;
+                   pages=arr[i];
+               }
+           }
+// Now check , count <= no. of student - move left for example mid = 146 and and partician taken placed in it range then 
+// have to move left else move right
+           if(count <= k){
+               ans=mid;
+                end=mid-1;
+           }else{
+              
+               start=mid+1;
+           }
+       }
+       return ans;
+    }
+};
