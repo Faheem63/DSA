@@ -1,0 +1,156 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+  // Initilize a vector
+    // vector<int>a;
+    // vector<int>a1(5,1); // size=capacity
+    // // size and capacity 
+    // cout <<"Size - "<< a.size() << endl;
+    // cout <<"Capacity - "<< a.capacity()<< endl;
+    
+    // // Inserting Element in vector
+    // a.push_back(2);
+    // a.push_back(5);
+    // a.push_back(7);
+    // // Calculating again size and capacity
+    // cout <<"Size - "<< a.size() << endl;
+    // cout <<"Capacity - "<< a.capacity()<< endl;
+    // // Upadte the value 
+    // a[1]=3;
+    // // Pring the size and capacity of a1 vector (size=capacity)
+    // cout <<"Size - "<< a1.size() << endl;
+    // cout <<"Capacity - "<< a1.capacity()<< endl;
+    // // Inserting and pring size and capacity
+    // a1.push_back(8);
+    // cout <<"Size - "<< a1.size() << endl;
+    // cout <<"Capacity - "<< a1.capacity()<< endl;
+    
+    // // Initilize vector like array and printng size and capacity
+    // vector<int>a2 ={2,4,5,7,9};
+    // cout <<"Size - "<< a2.size() << endl;
+    // cout <<"Capacity - "<< a2.capacity()<< endl;
+   
+  // // Delete Value from vector
+  // vector<int>vnew;
+  // vnew.push_back(2);
+  // vnew.push_back(3);
+  // vnew.push_back(5);
+  // vnew.push_back(1);
+  // vnew.push_back(8);
+  // // Remove last element from vector
+  // vnew.pop_back();
+  // cout <<"Size - "<< vnew.size() << endl;
+  //   cout <<"Capacity - "<< vnew.capacity()<< endl;
+  //   // Removing 2 no. of index element in vector
+  //   vnew.erase(vnew.begin()+2);
+  //   cout <<"Size - "<< vnew.size() << endl;
+  //   cout <<"Capacity - "<< vnew.capacity()<< endl;
+  //   // Printing the vector values
+  //   for(int i=0;i<vnew.size();i++){
+  //     cout << vnew[i]<< " " ;
+  //   }
+  //   cout << endl;
+  //   //Insert value in index of vector
+  //   vnew.insert(vnew.begin()+2,50);
+  //   for(int i=0;i<vnew.size();i++){
+  //     cout << vnew[i]<< " ";
+  //   }
+  //   // Changing value 50 to 30
+  // vnew[2]=30;
+  // cout << endl;
+   
+  // for(int i=0;i<vnew.size();i++){
+  //     cout << vnew[i]<< " ";
+  //   }
+  //   cout << endl;
+  //   // Clear all element from vector
+  //   vnew.clear();
+  //   // Check the vector is empty if yes return 1 else 0
+  //   cout << vnew.empty()<< endl;
+    
+  //   cout <<"Size - "<< vnew.size() << endl;
+  //   cout <<"Capacity - "<< vnew.capacity()<< endl;
+  
+  // vector<int>arr;
+  // arr.push_back(2);
+  // arr.push_back(9);
+  // arr.push_back(12);
+  // arr.push_back(7);
+  // //Ways to print first element in vector
+  // cout << arr[0]<<endl;
+  // cout << arr.front()<<endl;
+  // cout << arr.at(0)<<endl;
+  
+  // //Ways to print first element in vector
+  // cout << arr[3]<<endl;
+  // cout << arr.back()<<endl;
+  // cout << arr.at(3)<<endl;
+  // cout << arr[arr.size()-1]<< endl;
+  // //Copy 1 vector to another vector
+  // vector<int>b;
+  // b=arr;
+  // //Best way to print a vector
+  // for(auto i:b){
+  //   cout << i <<" ";
+  // }
+  // cout << endl; 
+  // //Sorting in ascending order
+  // sort(b.begin(),b.end());
+  // for(auto i:b){
+  //   cout << i << " ";
+  // }
+  // cout << endl;
+  // //Sorting in descending order
+  // sort(b.begin(),b.end(),greater<int>());
+  // for(auto i:b){
+  //   cout << i << " ";
+  // }
+  // cout << endl;
+  
+  // vector<int>ans;
+  // ans.push_back(50);
+  // ans.push_back(1);
+  // ans.push_back(12);
+  // ans.push_back(30);
+  // ans.push_back(42);
+  // // Reverse method to print descending order
+  // sort(ans.rbegin(),ans.rend());
+  // for(auto i:ans)
+  // cout << i << " ";
+  // cout << endl;
+  
+  // vector<int>vec;
+  // vec.push_back(1);
+  // vec.push_back(2);
+  //   vec.push_back(21);
+  //   vec.push_back(2);
+  //   //Count the total occurence of key - 2
+  //   int ans=count(vec.begin(),vec.end(),2);
+  //   cout << ans<<endl;
+  //   // Maximum element in vector
+  //   int maximum=*max_element(vec.begin(),vec.end());
+  //   cout << maximum << endl;
+  //   // Minimum element in vector
+  //   int minimum=*min_element(vec.begin(),vec.end());
+  //   cout << minimum << endl;
+  //Lower and upper bound 
+  vector<int>v;
+  v.push_back(1);
+   v.push_back(2);
+    v.push_back(4);
+     v.push_back(4);
+     v.push_back(4);
+     v.push_back(5);
+     v.push_back(8);
+     int key=4;
+     //Lower
+     auto it1=lower_bound(v.begin(),v.end(),key);
+     cout << " Lower - " << (it1 - v.begin());
+     cout << endl;
+     //upper
+     auto it2=upper_bound(v.begin(),v.end(),key);
+     cout << "Upper - " << (it2 - v.begin());
+    return 0;
+}
